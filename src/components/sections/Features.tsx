@@ -19,7 +19,7 @@ const partnerFeatures = [
 
 export function Features() {
   return (
-    <section className="py-24 bg-white">
+    <section id="features" className="py-24 bg-white scroll-mt-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-20">
           <h2 className="font-headline font-bold text-3xl md:text-5xl mb-6">Features Built For You</h2>

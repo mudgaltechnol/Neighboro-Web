@@ -8,12 +8,10 @@ import { DownloadSection } from '@/components/sections/Download';
 
 export default function Home() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-x-hidden">
       <Hero />
       <AppInfo />
-      <div id="features">
-        <Features />
-      </div>
+      <Features />
       <HowItWorks />
       <Benefits />
       <DownloadSection />
