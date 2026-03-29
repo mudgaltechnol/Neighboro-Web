@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Hyperlocal Indian market vibe with bustling local shops",
+      "imageUrl": "https://picsum.photos/seed/market1/1200/800",
+      "imageHint": "indian market"
+    },
+    {
+      "id": "customer-app-preview",
+      "description": "Mobile app mockup showing local offers and deals",
+      "imageUrl": "https://picsum.photos/seed/app1/600/1200",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "partner-app-preview",
+      "description": "Mobile app mockup showing business analytics and offer management",
+      "imageUrl": "https://picsum.photos/seed/app2/600/1200",
+      "imageHint": "business app"
+    },
+    {
+      "id": "shop-owner",
+      "description": "Happy indian shop owner using a smartphone",
+      "imageUrl": "https://picsum.photos/seed/owner1/800/600",
+      "imageHint": "shop owner"
+    }
+  ]
+}
