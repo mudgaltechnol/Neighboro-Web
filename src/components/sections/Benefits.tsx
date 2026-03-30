@@ -16,7 +16,7 @@ export function Benefits() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1">
-            <h2 className="font-headline font-bold text-4xl md:text-5xl mb-8 leading-tight">Why Choose <br /><span className="text-primary italic underline underline-offset-8">Neighboro Connect?</span></h2>
+            <h2 className="font-headline font-bold text-4xl md:text-5xl mb-8 leading-tight">Why Choose <br /><span className="text-primary italic underline underline-offset-8">Neighboro?</span></h2>
             <p className="text-lg text-muted-foreground mb-12">
               We're bridging the gap between local retail and modern digital discovery. Our mission is to make local shops the first choice for every Indian household.
             </p>
@@ -45,7 +45,7 @@ export function Benefits() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-8">
                 <div className="text-white">
-                  <div className="text-3xl font-bold mb-1">5000+</div>
+                  <div className="text-3xl font-bold mb-1">Several</div>
                   <div className="text-sm font-medium opacity-90 uppercase tracking-wider">Active Shops across Haryana</div>
                 </div>
               </div>

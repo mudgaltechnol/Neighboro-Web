@@ -1,19 +1,39 @@
 
+"use client";
+
 import Link from 'next/link';
+import Image from 'next/image';
 import { Smartphone, Facebook, Twitter, Instagram, Mail } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 export function Footer() {
+  const { toast } = useToast();
+
+  const toastAction = (message: string) => {
+    toast({
+      title: 'Coming Soon',
+      description: message,
+      variant: 'info',
+    });
+  };
+
   return (
     <footer className="bg-white border-t pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="bg-primary p-1.5 rounded-lg">
-                <Smartphone className="w-5 h-5 text-white" />
-              </div>
+                 <div className="p-1.5 rounded-lg group-hover:scale-105 transition-transform overflow-hidden">
+                            <Image
+                              src="/logo.png"
+                              alt="NeighboroConnect Logo"
+                              width={50}
+                              height={50}
+                              className="w-14 h-14 object-contain"
+                            />
+                          </div>
               <span className="font-headline font-bold text-xl tracking-tight text-primary">
-                Neighboro<span className="text-secondary">Connect</span>
+                Neighboro
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
@@ -35,9 +55,15 @@ export function Footer() {
           <div>
             <h4 className="font-headline font-bold text-sm uppercase tracking-wider mb-6 text-foreground">For Users</h4>
             <ul className="space-y-4">
-              <li><Link href="/#customer" className="text-sm text-muted-foreground hover:text-primary transition-colors">Find Local Shops</Link></li>
-              <li><Link href="/#customer" className="text-sm text-muted-foreground hover:text-primary transition-colors">Today's Best Offers</Link></li>
-              <li><Link href="/#customer" className="text-sm text-muted-foreground hover:text-primary transition-colors">Trending Deals</Link></li>
+              <li>
+                <button type="button" className="text-sm text-muted-foreground hover:text-primary transition-colors" onClick={() => toastAction('Find local shops is coming soon.')}>Find Local Shops</button>
+              </li>
+              <li>
+                <button type="button" className="text-sm text-muted-foreground hover:text-primary transition-colors" onClick={() => toastAction("Today's Best Offers is coming soon.")}>Today's Best Offers</button>
+              </li>
+              <li>
+                <button type="button" className="text-sm text-muted-foreground hover:text-primary transition-colors" onClick={() => toastAction('Trending deals is coming soon.')}>Trending Deals</button>
+              </li>
               <li><Link href="/delete-account" className="text-sm text-muted-foreground hover:text-primary transition-colors">Account Support</Link></li>
             </ul>
           </div>
@@ -45,10 +71,16 @@ export function Footer() {
           <div>
             <h4 className="font-headline font-bold text-sm uppercase tracking-wider mb-6 text-foreground">For Partners</h4>
             <ul className="space-y-4">
-              <li><Link href="/#partner" className="text-sm text-muted-foreground hover:text-primary transition-colors">List Your Shop</Link></li>
-              <li><Link href="/#partner" className="text-sm text-muted-foreground hover:text-primary transition-colors">Business Growth</Link></li>
-              <li><Link href="/#partner" className="text-sm text-muted-foreground hover:text-primary transition-colors">Manage Offers</Link></li>
-              <li><Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Partner Terms</Link></li>
+              <li>
+                <button type="button" className="text-sm text-muted-foreground hover:text-primary transition-colors" onClick={() => toastAction('Listing your shop is coming soon.')}>List Your Shop</button>
+              </li>
+              <li>
+                <button type="button" className="text-sm text-muted-foreground hover:text-primary transition-colors" onClick={() => toastAction('Business growth info is coming soon.')}>Business Growth</button>
+              </li>
+              <li>
+                <button type="button" className="text-sm text-muted-foreground hover:text-primary transition-colors" onClick={() => toastAction('Manage offers feature is coming soon.')}>Manage Offers</button>
+              </li>
+              <li><button type="button" className="text-sm text-muted-foreground hover:text-primary transition-colors" onClick={() => toastAction('Partner terms is coming soon.')}>Partner Terms</button></li>
             </ul>
           </div>
 
@@ -57,11 +89,11 @@ export function Footer() {
             <ul className="space-y-4">
               <li><Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
               <li><Link href="/delete-account" className="text-sm text-muted-foreground hover:text-primary transition-colors">Delete Account</Link></li>
-              <li>
-                <a href="mailto:support@neighboro.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                  <Mail className="w-4 h-4" /> support@neighboro.com
+              {/* <li>
+                <a href="mailto:lakshay01mudgal@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Mail className="w-4 h-4" /> lakshay01mudgal@gmail.com
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

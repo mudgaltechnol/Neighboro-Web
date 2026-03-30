@@ -2,11 +2,15 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { Menu, X, Smartphone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Navbar() {
+  const router = useRouter();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -21,14 +25,30 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="bg-primary p-1.5 rounded-lg group-hover:scale-105 transition-transform">
-              <Smartphone className="w-5 h-5 text-white" />
+          <button
+            type="button"
+            onClick={() => {
+              if (pathname === '/') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              } else {
+                router.push('/');
+              }
+            }}
+            className="flex items-center gap-2 group"
+          >
+            <div className="p-1.5 rounded-lg group-hover:scale-105 transition-transform overflow-hidden">
+              <Image
+                src="/logo.png"
+                alt="Neighboro Logo"
+                width={50}
+                height={50}
+                className="w-14 h-14 object-contain rounded-[20px]"
+              />
             </div>
             <span className="font-headline font-bold text-xl tracking-tight text-primary">
-              Neighboro<span className="text-secondary">Connect</span>
+              Neighboro
             </span>
-          </Link>
+          </button>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
@@ -41,7 +61,11 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Button size="sm" className="rounded-full px-6 shadow-md hover:shadow-lg transition-all">
+            <Button 
+              size="sm" 
+              className="rounded-full px-6 shadow-md hover:shadow-lg transition-all"
+              onClick={() => window.open('https://play.google.com/store/apps/developer?id=EdutainX', '_blank')}
+            >
               Download App
             </Button>
           </div>
@@ -70,7 +94,10 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Button className="w-full rounded-full shadow-md">
+            <Button 
+              className="w-full rounded-full shadow-md"
+              onClick={() => window.open('https://play.google.com/store/apps/developer?id=EdutainX', '_blank')}
+            >
               Download Now
             </Button>
           </div>

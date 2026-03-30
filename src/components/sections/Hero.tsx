@@ -16,7 +16,7 @@ export function Hero() {
           <div className="flex-1 max-w-2xl text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary text-sm font-semibold mb-6 border border-secondary/20 animate-in fade-in slide-in-from-bottom-4">
               <span className="flex h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
-              Now Serving Panipat & Delhi NCR
+              Now Serving in Bahadurgarh, Haryana
             </div>
             
             <h1 className="font-headline font-bold text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 text-foreground tracking-tight">
@@ -29,7 +29,7 @@ export function Hero() {
               <span className="text-primary font-medium"> Neighboro</span> connects smart shoppers with local heroes.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
+            {/* <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
               <Button size="lg" className="rounded-full px-8 h-14 text-base shadow-xl hover:shadow-2xl transition-all group w-full sm:w-auto">
                 Discover Offers
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -37,7 +37,7 @@ export function Hero() {
               <Button size="lg" variant="outline" className="rounded-full px-8 h-14 text-base border-primary/20 hover:bg-primary/5 transition-all w-full sm:w-auto">
                 Partner with Us
               </Button>
-            </div>
+            </div> */}
 
             <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
@@ -65,7 +65,7 @@ export function Hero() {
                 <div className="w-1/2 -rotate-12 translate-y-12 animate-in slide-in-from-left-20 duration-1000">
                   <div className="bg-white rounded-[2.5rem] p-3 shadow-2xl border-4 border-slate-900 overflow-hidden aspect-[9/19]">
                     <Image 
-                      src={PlaceHolderImages.find(i => i.id === 'customer-app-preview')?.imageUrl || ''} 
+                      src="/n2.png" 
                       alt="Customer App"
                       fill
                       className="object-cover rounded-[1.8rem]"
@@ -80,7 +80,7 @@ export function Hero() {
                 <div className="w-1/2 rotate-12 -translate-y-12 animate-in slide-in-from-right-20 duration-1000">
                   <div className="bg-white rounded-[2.5rem] p-3 shadow-2xl border-4 border-slate-900 overflow-hidden aspect-[9/19]">
                     <Image 
-                      src={PlaceHolderImages.find(i => i.id === 'partner-app-preview')?.imageUrl || ''} 
+                      src="/n1.png" 
                       alt="Partner App"
                       fill
                       className="object-cover rounded-[1.8rem]"

@@ -3,6 +3,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
+import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'Neighboro Connect - Local Shops & Offers Near You',
@@ -27,6 +28,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

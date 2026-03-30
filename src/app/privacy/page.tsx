@@ -98,7 +98,7 @@ export default function PrivacyPolicy() {
                 <li><strong>Neighboro Partner</strong> – A business app that helps local shop owners list their shops and post offers to nearby customers.</li>
               </ul>
               <p>This Privacy Policy applies to both applications and our website. By downloading, installing, or using our apps, you agree to the practices described in this policy.</p>
-              <p>If you have questions about this policy, contact us at: <strong>privacy@neighboro.in</strong></p>
+              <p>If you have questions about this policy, contact us at: <strong>lakshay01mudgal@gmail.com</strong></p>
             </div>
           </section>
 
@@ -207,12 +207,12 @@ export default function PrivacyPolicy() {
                 >
                   <History className="w-4 h-4" /> Account Deletion Portal
                 </Link>
-                <a 
+                {/* <a 
                   href="mailto:privacy@neighboro.in" 
                   className="inline-flex items-center justify-center bg-slate-100 text-slate-700 font-bold px-6 py-3 rounded-xl border border-slate-200 hover:bg-slate-200 transition-colors gap-2"
                 >
                   <Mail className="w-4 h-4" /> Contact Privacy Officer
-                </a>
+                </a> */}
               </div>
             </div>
           </section>
@@ -225,12 +225,12 @@ export default function PrivacyPolicy() {
                 <p className="text-slate-400 max-w-xl mx-auto mb-8 leading-relaxed">
                   We're happy to clarify anything about how we handle your data. Write to us anytime — we respond within 7 business days.
                 </p>
-                <a 
-                  href="mailto:privacy@neighboro.in" 
+                <button 
+                  onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=lakshay01mudgal@gmail.com&su=Privacy%20Policy%20Inquiry', '_blank')}
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95"
                 >
-                  <Mail className="w-5 h-5" /> privacy@neighboro.in
-                </a>
+                  <Mail className="w-5 h-5" /> Contact Us
+                </button>
               </div>
               <div className="absolute top-0 right-0 w-64 h-64 bg-green-600/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
             </div>

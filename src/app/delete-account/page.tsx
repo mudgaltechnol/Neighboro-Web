@@ -10,37 +10,34 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { AlertCircle, ShieldAlert, Loader2, CheckCircle2 } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { useToast } from '@/hooks/use-toast';
-import { submitDeletionRequest } from './actions';
 
 export default function DeleteAccount() {
   const { toast } = useToast();
   const [isPending, setIsPending] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submittedEmail, setSubmittedEmail] = useState('');
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setIsPending(true);
 
     const formData = new FormData(event.currentTarget);
-    
-    try {
-      const result = await submitDeletionRequest(formData);
-      if (result.success) {
-        setIsSubmitted(true);
-        toast({
-          title: "Request Submitted",
-          description: result.message,
-        });
-      }
-    } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "Submission Failed",
-        description: "Something went wrong. Please try again later.",
-      });
-    } finally {
-      setIsPending(false);
-    }
+    const userEmail = String(formData.get('email') || '');
+    const reason = String(formData.get('reason') || '');
+
+    const subject = 'Request for account deletion';
+    const body = `User Email: ${userEmail}\nReason: ${reason}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=lakshay01mudgal@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.open(gmailUrl, '_blank');
+    setIsSubmitted(true);
+    setSubmittedEmail(userEmail);
+    toast({
+      title: "Gmail Opened",
+      description: "Gmail has been opened with your account deletion request. Please send the email to complete the request.",
+    });
+
+    setIsPending(false);
   }
 
   if (isSubmitted) {
@@ -51,7 +48,7 @@ export default function DeleteAccount() {
         </div>
         <h1 className="font-headline font-bold text-4xl mb-4">Request Received</h1>
         <p className="text-muted-foreground mb-8 text-lg">
-          We've received your account deletion request for <span className="text-foreground font-semibold">lakshay01mudgal@gmail.com</span> notification. Our support team will process this shortly.
+          Gmail has been opened with your account deletion request for <span className="text-foreground font-semibold">{submittedEmail}</span>. Please send the email to complete the request. Our support team will process this shortly.
         </p>
         <Button asChild variant="outline">
           <a href="/">Return to Home</a>
@@ -134,7 +131,7 @@ export default function DeleteAccount() {
             </div>
             
             <p className="text-xs text-center text-muted-foreground">
-              Once submitted, our team will process your request within 48-72 hours. A notification has been queued for our admin team.
+              Once submitted, Gmail will open with your request. Please send the email to notify our team. We will process your request within 48-72 hours.
             </p>
           </form>
         </CardContent>

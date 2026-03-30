@@ -3,8 +3,10 @@
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
 
 export function DownloadSection() {
+  const { toast } = useToast();
   return (
     <section className="py-24 bg-primary relative overflow-hidden">
       {/* Decorative Elements */}
@@ -15,7 +17,7 @@ export function DownloadSection() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-headline font-bold text-3xl md:text-5xl text-white mb-8">Ready to grow your shopping <br />or your shop?</h2>
           <p className="text-white/80 text-lg mb-12 max-w-2xl mx-auto">
-            Join thousands of users in Panipat and Delhi NCR who are already rediscovering their neighborhood with Neighboro Connect.
+            Join thousands of users in Bahadurgarh who are already rediscovering their neighborhood with Neighboro Connect.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
@@ -23,8 +25,27 @@ export function DownloadSection() {
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
               <h3 className="text-xl font-bold text-white mb-6">Download Neighboro (Customer)</h3>
               <div className="flex flex-col items-center gap-4">
-                 <Image src="https://placehold.co/180x60/white/black?text=Google+Play" alt="Google Play" width={180} height={60} className="h-14 w-auto cursor-pointer hover:scale-105 transition-transform" />
-                 <p className="text-white/60 text-xs italic">For smart shoppers in your area</p>
+                 <a
+                   href="https://play.google.com/store/apps/developer?id=EdutainX"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="cursor-pointer"
+                 >
+                   <Image src="/play-store.png" alt="Google Play" width={180} height={60} className="h-14 w-auto cursor-pointer hover:scale-105 transition-transform" />
+                 </a>
+              </div>
+               <div className="flex flex-col items-center gap-10 mt-6">
+                 <button
+                   type="button"
+                   onClick={() => toast({
+                     title: "Coming Soon!",
+                     description: "iOS app is coming soon to the Apple App Store.",
+                     variant: "info",
+                   })}
+                   className="cursor-pointer"
+                 >
+                   <Image src="/apple-store.png" alt="App Store" width={180} height={60} className="h-14 w-auto cursor-pointer hover:scale-105 transition-transform" />
+                 </button>
               </div>
             </div>
 
@@ -32,8 +53,27 @@ export function DownloadSection() {
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
               <h3 className="text-xl font-bold text-white mb-6">Download Neighboro Partner (Shop)</h3>
               <div className="flex flex-col items-center gap-4">
-                 <Image src="https://placehold.co/180x60/white/black?text=Google+Play" alt="Google Play" width={180} height={60} className="h-14 w-auto cursor-pointer hover:scale-105 transition-transform" />
-                 <p className="text-white/60 text-xs italic">Boost your shop visibility today</p>
+                 <a
+                   href="https://play.google.com/store/apps/developer?id=EdutainX"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="cursor-pointer"
+                 >
+                   <Image src="/play-store.png" alt="App Store" width={180} height={60} className="h-14 w-auto cursor-pointer hover:scale-105 transition-transform" />
+                 </a>
+              </div>
+               <div className="flex flex-col items-center gap-10 mt-6">
+                 <button
+                   type="button"
+                   onClick={() => toast({
+                     title: "Coming Soon!",
+                     description: "iOS Partner app is coming soon to the Apple App Store.",
+                     variant: "info",
+                   })}
+                   className="cursor-pointer"
+                 >
+                   <Image src="/apple-store.png" alt="App Store" width={180} height={60} className="h-14 w-auto cursor-pointer hover:scale-105 transition-transform" />
+                 </button>
               </div>
             </div>
           </div>
