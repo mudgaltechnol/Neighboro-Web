@@ -26,7 +26,7 @@ export function DownloadSection() {
               <h3 className="text-xl font-bold text-white mb-6">Download Neighboro (Customer)</h3>
               <div className="flex flex-col items-center gap-4">
                  <a
-                   href="https://play.google.com/store/apps/developer?id=EdutainX"
+                   href="https://play.google.com/store/apps/details?id=com.edutainx.neighboro"
                    target="_blank"
                    rel="noopener noreferrer"
                    className="cursor-pointer"
@@ -54,7 +54,7 @@ export function DownloadSection() {
               <h3 className="text-xl font-bold text-white mb-6">Download Neighboro Partner (Shop)</h3>
               <div className="flex flex-col items-center gap-4">
                  <a
-                   href="https://play.google.com/store/apps/developer?id=EdutainX"
+                   href="https://play.google.com/store/apps/details?id=com.edutainx.neighboropartner"
                    target="_blank"
                    rel="noopener noreferrer"
                    className="cursor-pointer"

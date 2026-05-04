@@ -53,7 +53,7 @@ export function AppInfo() {
 
               <div className="flex gap-4">
                   <a 
-                    href="https://play.google.com/store/apps/developer?id=EdutainX" 
+                    href="https://play.google.com/store/apps/details?id=com.edutainx.neighboro" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="cursor-pointer"
@@ -124,7 +124,7 @@ export function AppInfo() {
 
               <div className="flex gap-4">
                 <a 
-                  href="https://play.google.com/store/apps/developer?id=EdutainX" 
+                  href="https://play.google.com/store/apps/details?id=com.edutainx.neighboropartner" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="cursor-pointer"

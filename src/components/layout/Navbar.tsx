@@ -64,7 +64,7 @@ export function Navbar() {
             <Button 
               size="sm" 
               className="rounded-full px-6 shadow-md hover:shadow-lg transition-all"
-              onClick={() => window.open('https://play.google.com/store/apps/developer?id=EdutainX', '_blank')}
+              onClick={() => window.open('https://play.google.com/store/apps/details?id=com.edutainx.neighboro', '_blank')}
             >
               Download App
             </Button>
@@ -96,7 +96,7 @@ export function Navbar() {
             ))}
             <Button 
               className="w-full rounded-full shadow-md"
-              onClick={() => window.open('https://play.google.com/store/apps/developer?id=EdutainX', '_blank')}
+              onClick={() => window.open('https://play.google.com/store/apps/details?id=com.edutainx.neighboro', '_blank')}
             >
               Download Now
             </Button>
